@@ -12,7 +12,16 @@
   <body>
     <div id="root"></div>
     <script type="text/babel">
+      const App = () => {
+        return (
+          <div>
+            <h1>My First React Component</h1>{" "}
+          </div>
+        );
+      };
       
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<App />);
     </script>
   </body>
 </html>
