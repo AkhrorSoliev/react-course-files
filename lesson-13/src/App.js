@@ -10,21 +10,32 @@ function App() {
     {title: "doniyor's live stream", id: 2},
     {title: "match: manchester united vs barcelona", id: 3}
   ])
- 
-  
   
   const handleClick = () => {
     setName('Doniyor')
   }
 
+
+  // delete items
+  const handleDelete = (id) => {
+    setEvents((prev) => {
+      return prev.filter((event) => {
+        return event.id !== id 
+      })
+    }) 
+  }
+
+
+
   return (
     <div className="App">
         <h1>My name is {name}</h1>
         <button onClick={handleClick}>Change name</button>
-        {events.map((event, index) => {
+        {events.map((event) => {
           return (
             <div key={event.id}>
-              <h2> {index} - {event.title} </h2>
+              <h2>{event.title}</h2>
+              <button onClick={() => handleDelete(event.id)}>Delete</button>
             </div>
           )
         })}
