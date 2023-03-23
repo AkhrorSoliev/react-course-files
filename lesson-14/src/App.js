@@ -10,6 +10,7 @@ function App() {
     {title: "doniyor's live stream", id: 2},
     {title: "match: manchester united vs barcelona", id: 3}
   ])
+  const [showEvents, setShowEvents] = useState(true)
   
   const handleClick = () => {
     setName('Doniyor')
@@ -31,14 +32,23 @@ function App() {
     <div className="App">
         <h1>My name is {name}</h1>
         <button onClick={handleClick}>Change name</button>
-        {events.map((event) => {
-          return (
-            <div key={event.id}>
-              <h2>{event.title}</h2>
-              <button onClick={() => handleDelete(event.id)}>Delete</button>
-            </div>
-          )
-        })}
+
+        <hr />
+        <br />
+
+        {showEvents && <button onClick={() => {setShowEvents(false)}}>Hide Events</button>}
+        {!showEvents && <button onClick={() => {setShowEvents(true)}}>Show Events</button>}
+        {showEvents && <div>
+          {events.length === 0 && <div> <h5>No items left</h5> </div>}
+          {events.map((event) => {
+            return (
+              <div key={event.id}>
+                <h2>{event.title}</h2>
+                <button onClick={() => {handleDelete(event.id)}}>Delete</button>
+              </div>
+            )
+          })}
+        </div>}
     </div>
   );
 }
