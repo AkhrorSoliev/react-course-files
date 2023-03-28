@@ -1,5 +1,6 @@
 import './App.css';
 import { useState } from 'react'
+import Title from './components/Title';
 
 // useState 
 
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <div className="App">
+         <Title/>
         <h1>My name is {name}</h1>
         <button onClick={handleClick}>Change name</button>
         <hr />
