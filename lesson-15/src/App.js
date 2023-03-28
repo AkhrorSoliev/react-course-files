@@ -1,16 +1,21 @@
 import './App.css';
 import { useState } from 'react'
-import Title from './components/Title';
 
 // useState 
 
 function App() {
+  const [name, setName] = useState("Ahror")
   const [showConent, setShowContent] = useState(true)
   const [events, setEvents] = useState([
     {title: "akhror's birthday party", id: 1},
     {title: "doniyor's live stream", id: 2},
     {title: "match: manchester united vs barcelona", id: 3}
   ])
+
+  const handleClick = () => {
+    setName('Doniyor')
+  }
+
   
   // delete items
   const handleDelete = (id) => {
@@ -25,7 +30,8 @@ function App() {
 
   return (
     <div className="App">
-        <Title/>
+        <h1>My name is {name}</h1>
+        <button onClick={handleClick}>Change name</button>
         <hr />
         <br />
         {showConent && <button onClick={() => setShowContent(false)}>Hide Conent</button>}
