@@ -1,22 +1,14 @@
 import './App.css';
 import { useState } from 'react'
-import Title from './components/Title';
-
-// useState 
+import Title from './components/Title'
 
 function App() {
-  const [name, setName] = useState("Ahror")
   const [showConent, setShowContent] = useState(true)
   const [events, setEvents] = useState([
     {title: "akhror's birthday party", id: 1},
     {title: "doniyor's live stream", id: 2},
     {title: "match: manchester united vs barcelona", id: 3}
   ])
-
-  const handleClick = () => {
-    setName('Doniyor')
-  }
-
   
   // delete items
   const handleDelete = (id) => {
@@ -27,15 +19,10 @@ function App() {
     }) 
   }
 
-
-
   return (
     <div className="App">
-         <Title/>
-        <h1>My name is {name}</h1>
-        <button onClick={handleClick}>Change name</button>
-        <hr />
-        <br />
+        <Title title="Akhror's Kingdom👑 Events" subtitle="All events well be here :)"/>
+        <Title title="Doniyor's Kingdom👑 Events" subtitle="All events well be here :)"/>
         {showConent && <button onClick={() => setShowContent(false)}>Hide Conent</button>}
         {!showConent && <button onClick={() => setShowContent(true)}>Show Conent</button>}
         {showConent && <div>
