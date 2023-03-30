@@ -1,10 +1,11 @@
 import './App.css';
 import { useState } from 'react'
 import Title from './components/Title'
-import Modal from './components/Modal'
 import { Fragment } from 'react';
+import Modal from './components/Modal';
 
 function App() {
+  const [showModal, setShowModal] = useState(false)
   const [showConent, setShowContent] = useState(true)
   const [events, setEvents] = useState([
     {title: "akhror's birthday party", id: 1},
@@ -19,6 +20,11 @@ function App() {
         return event.id !== id 
       })
     }) 
+  }
+
+  // close modal funciton
+  const closeModal = () => {
+    setShowModal(false)
   }
 
   let subtitle = "All events well be here :)"
@@ -39,12 +45,18 @@ function App() {
             </Fragment>
           )
         })} </div>}
-
-        <Modal>
-          <h2>Akhror Web Youtube Channel❤️</h2>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente porro amet iure ex ullam nemo sint nobis facere fugit. Quam nobis blanditiis non ipsum, numquam, sunt eveniet tempora culpa velit libero dolore eos rerum debitis similique esse tenetur maxime eaque laborum ad doloremque, alias vel. Dicta temporibus at architecto quis?</p>
-          <a href="">Subscribe</a>
-        </Modal>
+        {/* <Modal>
+            <h2>Akhror Soliev Youtube Channel❤️</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, accusantium?</p>
+        </Modal> */}
+        {showModal && <Modal closeModal={closeModal}>
+          <h1>Akhror Soliev Youtube Channel❤️</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta id ex molestiae ut rerum. Est rem vitae sed ut nemo eligendi cumque eius, soluta distinctio suscipit exercitationem nostrum neque at praesentium veniam accusamus? Consequuntur ducimus atque voluptatum numquam corporis blanditiis quae voluptates libero quibusdam, eveniet fugiat ex a illum quos?</p>
+          <a href="">Subscripbe</a>
+        </Modal>}
+        <br />
+        <br />
+        <button onClick={() => {setShowModal(true)}}>Show Modal</button>
     </div>
   );
 }
