@@ -1,6 +1,7 @@
 import './App.css';
 import { useState } from 'react'
 import Title from './components/Title'
+import Modal from './components/Modal'
 import { Fragment } from 'react';
 
 function App() {
@@ -20,11 +21,12 @@ function App() {
     }) 
   }
 
-  const subtitle = "All events well be here :)"
+  let subtitle = "All events well be here :)"
 
   return (
     <div className="App">
         <Title title="Akhror's Kingdom👑 Events" subtitle={subtitle}/>
+        <br />
         {showConent && <button onClick={() => setShowContent(false)}>Hide Conent</button>}
         {!showConent && <button onClick={() => setShowContent(true)}>Show Conent</button>}
         {showConent && <div>
@@ -37,6 +39,12 @@ function App() {
             </Fragment>
           )
         })} </div>}
+
+        <Modal>
+          <h2>Akhror Web Youtube Channel❤️</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente porro amet iure ex ullam nemo sint nobis facere fugit. Quam nobis blanditiis non ipsum, numquam, sunt eveniet tempora culpa velit libero dolore eos rerum debitis similique esse tenetur maxime eaque laborum ad doloremque, alias vel. Dicta temporibus at architecto quis?</p>
+          <a href="">Subscribe</a>
+        </Modal>
     </div>
   );
 }
