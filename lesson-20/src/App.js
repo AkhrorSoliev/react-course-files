@@ -22,7 +22,7 @@ function App() {
     }) 
   }
 
-  // close modal funciton
+  // toogle modal function
   const closeModal = () => {
     setShowModal(false)
   }
