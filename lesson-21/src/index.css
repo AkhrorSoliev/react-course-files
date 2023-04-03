@@ -12,6 +12,19 @@ code {
     monospace;
 }
 
+h2, p {
+  color:#555
+}
+
+button {
+  padding: 8px 12px;
+  background: #ff3b00;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 0;
+}
+
 .title {
   display: inline-block;
   padding: 30px 60px;
