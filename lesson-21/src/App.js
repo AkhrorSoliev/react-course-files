@@ -1,8 +1,8 @@
 import './App.css';
 import { useState } from 'react'
 import Title from './components/Title'
-import { Fragment } from 'react';
 import Modal from './components/Modal';
+import EventList from './components/EventList';
 
 function App() {
   const [showModal, setShowModal] = useState(false)
@@ -35,16 +35,7 @@ function App() {
         <br />
         {showConent && <button onClick={() => setShowContent(false)}>Hide Conent</button>}
         {!showConent && <button onClick={() => setShowContent(true)}>Show Conent</button>}
-        {showConent && <div>
-          {events.length === 0 && <h3>Not Conent Yet :(</h3>}
-         {events.map((event) => {
-          return (
-            <Fragment key={event.id}>
-              <h2>{event.title}</h2>
-              <button onClick={() => handleDelete(event.id)}>Delete</button>
-            </Fragment>
-          )
-        })} </div>}
+        {showConent && <EventList events={events} handleDelete={handleDelete}/>}
         {/* <Modal>
             <h2>Akhror Soliev Youtube Channel❤️</h2>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, accusantium?</p>
