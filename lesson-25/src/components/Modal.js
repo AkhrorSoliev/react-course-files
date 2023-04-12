@@ -2,7 +2,7 @@
 import "./Modal.css"
 import ReactDOM from 'react-dom'
 
-function Modal({ children, closeModal, isModeModal }) {
+function Modal({ children, closeModal, isModeModal}) {
   return ReactDOM.createPortal((
     <div className="modal-backdrop">
         <div className="modal" style={{
@@ -12,7 +12,7 @@ function Modal({ children, closeModal, isModeModal }) {
           }}>
            { children }
            <br />
-           <button onClick={closeModal}>Close</button>
+           <button className="modal-btn" onClick={closeModal}>Close</button>
         </div>
     </div>
   ), document.body)
