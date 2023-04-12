@@ -11,7 +11,7 @@ function EventList({ events, handleDelete }) {
             <button onClick={() => handleDelete(event.id)}>Delete</button>
           </Fragment>
         );
-      })}{" "}
+      })}
     </div>
   );
 }

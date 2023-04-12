@@ -13,3 +13,9 @@
   background: #fff;
   border-radius: 10px;
 }
+
+.modal h2 {
+  border-bottom: 2px solid #444;
+  padding-bottom:25px
+}
+
