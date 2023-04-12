@@ -40,7 +40,7 @@ function App() {
             <h2>Akhror Soliev Youtube Channel❤️</h2>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, accusantium?</p>
         </Modal> */}
-        {showModal && <Modal closeModal={closeModal}>
+        {showModal && <Modal closeModal={closeModal} isModeModal={false}>
           <h2>Akhror Soliev Youtube Channel❤️</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta id ex molestiae ut rerum. Est rem vitae sed ut nemo eligendi cumque eius, soluta distinctio suscipit exercitationem nostrum neque at praesentium veniam accusamus? Consequuntur ducimus atque voluptatum numquam corporis blanditiis quae voluptates libero quibusdam, eveniet fugiat ex a illum quos?</p>
           <a href="">Subscripbe</a>
