@@ -1,4 +1,5 @@
-import { Fragment } from "react";
+// style
+import style from './EventList.module.css'
 
 function EventList({ events, handleDelete }) {
   return (
@@ -6,10 +7,10 @@ function EventList({ events, handleDelete }) {
       {events.length === 0 && <h3>Not Conent Yet :(</h3>}
       {events.map((event) => {
         return (
-          <Fragment key={event.id}>
+          <div className={style.card} key={event.id}>
             <h2>{event.title}</h2>
             <button onClick={() => handleDelete(event.id)}>Delete</button>
-          </Fragment>
+          </div>
         );
       })}
     </div>
