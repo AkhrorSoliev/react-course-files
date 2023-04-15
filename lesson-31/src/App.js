@@ -8,11 +8,14 @@ import NewEventForm from './components/NewEventForm';
 function App() {
   const [showModal, setShowModal] = useState(false)
   const [showConent, setShowContent] = useState(true)
-  const [events, setEvents] = useState([
-    {title: "akhror's birthday party", id: 1},
-    {title: "doniyor's live stream", id: 2},
-    {title: "match: manchester united vs barcelona", id: 3}
-  ])
+  const [events, setEvents] = useState([])
+
+  const addEvent = (event) => {
+    setEvents((prev) => {
+      return [...prev, event]
+    })
+    setShowModal(false)
+  }
   
   // delete items
   const handleDelete = (id) => {
@@ -37,12 +40,8 @@ function App() {
         {showConent && <button onClick={() => setShowContent(false)}>Hide Conent</button>}
         {!showConent && <button onClick={() => setShowContent(true)}>Show Conent</button>}
         {showConent && <EventList events={events} handleDelete={handleDelete}/>}
-        {/* <Modal>
-            <h2>Akhror Soliev Youtube Channel❤️</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, accusantium?</p>
-        </Modal> */}
-        {showModal && <Modal closeModal={closeModal} isModeModal={false}>
-          <NewEventForm/>
+        {showModal && <Modal closeModal={closeModal}>
+          <NewEventForm addEvent={addEvent}/>
         </Modal>}
         <br />
         <br />
