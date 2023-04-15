@@ -2,7 +2,6 @@
 import style from  './EventList.module.css'
 
 function EventList({ events, handleDelete }) {
-  console.log(style)
   return (
     <div>
       {events.length === 0 && <h3>Not Conent Yet :(</h3>}
