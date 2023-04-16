@@ -10,13 +10,13 @@ function App() {
   const [showConent, setShowContent] = useState(true)
   const [events, setEvents] = useState([])
 
-  const addEvent = (event) => {
+  const newEvent = (event) => {
     setEvents((prev) => {
       return [...prev, event]
     })
     setShowModal(false)
   }
-  
+
   // delete items
   const handleDelete = (id) => {
     setEvents((prev) => {
@@ -24,11 +24,6 @@ function App() {
         return event.id !== id 
       })
     }) 
-  }
-
-  // toogle modal function
-  const closeModal = () => {
-    setShowModal(false)
   }
 
   let subtitle = "All events well be here :)"
@@ -40,8 +35,8 @@ function App() {
         {showConent && <button onClick={() => setShowContent(false)}>Hide Conent</button>}
         {!showConent && <button onClick={() => setShowContent(true)}>Show Conent</button>}
         {showConent && <EventList events={events} handleDelete={handleDelete}/>}
-        {showModal && <Modal closeModal={closeModal}>
-          <NewEventForm addEvent={addEvent}/>
+        {showModal && <Modal>
+          <NewEventForm newEvent={newEvent}/>
         </Modal>}
         <br />
         <br />

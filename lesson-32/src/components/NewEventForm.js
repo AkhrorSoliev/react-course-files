@@ -1,12 +1,13 @@
 // style
 import "./NewEventForm.css";
-import { useState } from 'react'
-import { v4 as uuidv4 } from 'uuid';
 
-function NewEventForm({ addEvent }) {
+import { useState } from 'react'
+import { v4 as uuidv4 } from 'uuid'
+
+function NewEventForm({newEvent}) {
   const [title, setTitle] = useState('')
   const [date, setDate] = useState('')
-
+  const [location, setLocation] = useState('fergana')
   const resetInputs = () => {
     setTitle('')
     setDate('')
@@ -17,9 +18,10 @@ function NewEventForm({ addEvent }) {
     const event = {
       title: title,
       date: date,
+      location: location,
       id: uuidv4()
     }
-    addEvent(event)
+    newEvent(event)
     resetInputs()
   }
 
@@ -32,6 +34,14 @@ function NewEventForm({ addEvent }) {
       <label>
         <span>Event Date:</span>
         <input type="date" onChange={(e) => setDate(e.target.value)} value={date}/>
+      </label>
+      <label>
+        <span>Event Location:</span>
+        <select onChange={(e) => setLocation(e.target.value)}>
+          <option value="fergana">Farg'ona</option>
+          <option value="tashkent">Toshkent</option>
+          <option value="london">London</option>
+        </select>
       </label>
       <button>Submit</button>
     </form>

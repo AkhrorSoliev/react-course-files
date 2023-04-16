@@ -9,6 +9,7 @@ function EventList({ events, handleDelete }) {
         return (
           <div className={style['card']} key={event.id}>
             <h2>{event.title}</h2>
+            <p>{event.location} - {event.date}</p>
             <button onClick={() => handleDelete(event.id)}>Delete</button>
           </div>
         );

@@ -2,12 +2,12 @@
 import "./Modal.css"
 import ReactDOM from 'react-dom'
 
-function Modal({ children, closeModal }) {
+function Modal({ children }) {
   return ReactDOM.createPortal((
     <div className="modal-backdrop">
         <div className="modal card" style={{
             border: '4px solid',
-            borderColor: 'red',
+            borderColor: 'yellowgreen',
             textAlign: 'center'
           }}>
            { children }
