@@ -1,24 +1,26 @@
 // style
 import "./NewEventForm.css";
 
-import { useState } from 'react'
+import { useRef } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 
 function NewEventForm({newEvent}) {
-  const [title, setTitle] = useState('')
-  const [date, setDate] = useState('')
-  const [location, setLocation] = useState('fergana')
+  const title = useRef()
+  const date = useRef()
+  const location = useRef('fargona')
+
   const resetInputs = () => {
-    setTitle('')
-    setDate('')
+    title.current.value = ''
+    date.current.value = ''
+    location.current.valueOf = 'fargona'
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
     const event = {
-      title: title,
-      date: date,
-      location: location,
+      title: title.current.value,
+      date: date.current.value,
+      location: location.current.value,
       id: uuidv4()
     }
     newEvent(event)
@@ -29,17 +31,17 @@ function NewEventForm({newEvent}) {
     <form className="new-event-form" onSubmit={handleSubmit}>
       <label>
         <span>Event Title:</span>
-        <input type="text" onChange={(e) => setTitle(e.target.value)} value={title}/>
+        <input type="text" ref={title}/>
       </label>
       <label>
         <span>Event Date:</span>
-        <input type="date" onChange={(e) => setDate(e.target.value)} value={date}/>
+        <input type="date" ref={date}/>
       </label>
       <label>
         <span>Event Location:</span>
-        <select onChange={(e) => setLocation(e.target.value)}>
+        <select ref={location}>
           <option value="fergana">Farg'ona</option>
-          <option value="tashkent">Toshkent</option>
+          <option value="tashkent">Tashkent</option>
           <option value="london">London</option>
         </select>
       </label>
