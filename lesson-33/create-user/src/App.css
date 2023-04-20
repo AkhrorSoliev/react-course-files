@@ -1,0 +1,42 @@
+.App {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+    margin-bottom: 5rem;
+    margin-top: 10rem;
+}
+
+.create-user {
+    position: fixed;
+    transform: rotate(-90deg);
+    top: 50%;
+    border: 0;
+    background-color: #F45050;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    left: -43px;
+}
+
+.no-users {
+    font-size: 10rem;
+    font-weight: bold;
+    opacity: 20%;
+    color: #ccc;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    user-select:none;
+}
+
+@media (max-width: 500px) {
+    .no-users {
+        font-size: 2.8rem;
+    }
+}

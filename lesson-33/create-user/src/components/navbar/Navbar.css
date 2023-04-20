@@ -1,0 +1,35 @@
+.navbar {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px dashed #B0DAFF;
+    margin-bottom: 5rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255,0.9);
+    z-index: 10000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    margin: 0;
+    color: #19376D;
+    cursor:pointer;
+    user-select: none;
+}
+
+.navbar-counter {
+    margin: 0;
+}
+
+@media (max-width: 375px) {
+    .navbar-logo {
+        font-size: 2.5rem;
+    }
+}

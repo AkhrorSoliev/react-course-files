@@ -1,0 +1,46 @@
+.userList-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 5rem 1rem;
+}
+
+.card-inner {
+    /* border: 1px solid; */
+    width: 250px;
+    text-align: center;
+    padding: 0.8rem 0.5rem;
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    transition: transform 0.2s;
+}
+
+.card-inner:hover {
+    transform: scale(1.05) rotate(-5deg);
+    -webkit-box-shadow: 4px 4px 12px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 12px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 12px 0px rgba(34, 60, 80, 0.2);
+}
+
+.card-inner img {
+    width: 150px;
+    height: 150px;
+    border-radius:50%;
+    object-fit: cover;
+}
+
+.card-inner button {
+    border: 0;
+    font-family: inherit;
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+@media (max-width:907px) {
+    .card-inner {
+        width: 100%;
+    }
+}
