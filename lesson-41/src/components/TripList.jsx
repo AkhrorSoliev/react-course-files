@@ -1,31 +1,18 @@
 // style
 import "./TripList.css";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState } from "react";
+import { useFetch } from '../hooks/useFetch'
 
 function TripList() {
-  const [trips, setTrips] = useState([]);
   const [url, setUrl] = useState("http://localhost:3000/trips")
-
-  console.log(trips)
-
-  // useCallback = functionlardi xotiraga saqlaydi (manzillarini)
-
-  const fetchTrips = useCallback(async () => {
-    const req = await fetch(url)
-    const data = await req.json()
-    setTrips(data)
-  }, [url]) 
-
-  useEffect(() => {
-    fetchTrips()
-  }, [fetchTrips]);
+  const { data: trips } = useFetch(url)
 
   return (
     <div className="trip-list">
       <h1>TripList</h1>
       <ul>
-        {trips.map((trip) => {
+        {trips && trips.map((trip) => {
           return (
             <li key={trip.title}>
               <h2>{trip.title}</h2>
