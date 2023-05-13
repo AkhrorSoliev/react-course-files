@@ -6,12 +6,13 @@ import { useFetch } from "../hooks/useFetch";
 
 function TripList() {
   const [url, setUrl] = useState("http://localhost:3000/trips")
-  const {data:trips, isPending } = useFetch(url)
+  const {data:trips, isPending, error } = useFetch(url)
 
   return (
     <div className="trip-list">
       <h1>TripList</h1>
-      { isPending && <div>Loading...</div> }
+      { isPending && <div><h3>Loading...</h3></div> }
+      { error && <div><h3>{error}</h3></div> }
       <ul>
         {trips && trips.map((trip) => {
           return (
