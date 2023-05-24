@@ -2,9 +2,6 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
-* {
-  box-sizing: border-box;
-}
 
 .App {
   max-width: 960px;
@@ -32,6 +29,7 @@ nav a.active {
   background: #333;
   text-decoration: none;
 }
+
 
 /* FORM */
 
@@ -72,4 +70,28 @@ nav a.active {
 
 .button:hover {
   background:#848484d2;
+}
+
+/* PAGE NOT FOUND */
+
+.pageNotFound-container {
+  text-align: center;
+}
+
+.pageNotFound-container p {
+  text-align: justify;
+}
+
+.pageNotFound-container a {
+  text-decoration: none;
+  color:#333;
+  padding: 5px 8px;
+  border: 2px solid #333;
+  background-color:#fff;
+
+}
+
+.pageNotFound-container a:hover {
+  background: #333;
+  color:#fff;
 }
