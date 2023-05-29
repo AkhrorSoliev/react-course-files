@@ -1,5 +1,3 @@
-import { useFetch } from "../hooks/useFetch"
-
 function Home() {
   return (
     <div>

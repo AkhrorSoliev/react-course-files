@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom'
 function ArticlesLayout() {
   return (
     <div>
-        <h1>Articles List</h1>
+        <h2>My Articles</h2>
         <hr />
         <Outlet/>
     </div>

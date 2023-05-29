@@ -10,7 +10,7 @@ function Form() {
             <input type="text" />
           </label>
           <label className="form-control">
-            <span>Your Question:</span>
+            <span>Your Email:</span>
             <textarea></textarea>
           </label>
           <button className="button">Send</button>
