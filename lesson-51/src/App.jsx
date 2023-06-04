@@ -14,7 +14,7 @@ import About from "./pages/About";
 import Faq from './pages/help/Faq'
 import Form from './pages/help/Form'
 import Articles from "./pages/articles/Articles";
-import ArticleDetail from './pages/articles/ArticleDetail'
+import ArticlesDetail from "./pages/articles/ArticlesDetail";
 import PageNotFound from "./pages/PageNotFound";
 
 // layouts
@@ -34,7 +34,7 @@ function App() {
         </Route>
         <Route path="articles" element={<ArticlesLayout/>}>
             <Route index element={<Articles/>}/>
-            <Route path=":id" element={<ArticleDetail/>}/>
+            <Route path=":id" element={<ArticlesDetail/>}/>
         </Route>
 
         {/* PAGE NOT FOUND */}
