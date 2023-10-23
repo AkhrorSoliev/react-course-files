@@ -1,5 +1,7 @@
 import { NavLink, Outlet } from "react-router-dom"
-import BreadCrums from "../components/BreadCrums"
+import BreadCrumps from "../components/BreadCrumps"
+
+
 function RootLayout() {
   return (
     <>
@@ -10,7 +12,7 @@ function RootLayout() {
          <NavLink to="/about">About</NavLink>
          <NavLink to="/contact">Contact</NavLink>
        </nav>
-        <BreadCrums/>
+       <BreadCrumps/>
        <main>
             <Outlet/>
        </main>
