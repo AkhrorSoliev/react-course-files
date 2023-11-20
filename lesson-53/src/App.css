@@ -74,15 +74,15 @@ nav a.active {
 
 /* PAGE NOT FOUND */
 
-.pageNotFound-container {
+.error-container {
   text-align: center;
 }
 
-.pageNotFound-container p {
+.error-container p {
   text-align: justify;
 }
 
-.pageNotFound-container a {
+.error-container a {
   text-decoration: none;
   color:#333;
   padding: 5px 8px;
@@ -91,9 +91,15 @@ nav a.active {
 
 }
 
-.pageNotFound-container a:hover {
+.error-container a:hover {
   background: #333;
   color:#fff;
+}
+
+.error-message {
+  font-size: 25px;
+  text-align: center;
+  color:tomato;
 }
 
 /* ARTICLES */

@@ -10,7 +10,7 @@ import Faq from "./pages/help/Faq";
 import Form from "./pages/help/Form";
 import Articles from "./pages/articles/Articles";
 import ArticleDetail from "./pages/articles/ArticleDetail";
-import PageNotFound from "./pages/PageNotFound";
+import ErrorPage from "./pages/ErrorPage";
 
 // layouts
 import RootLayout from "./layout/RootLayout";
@@ -22,7 +22,7 @@ function App() {
     {
       path: "/",
       element: <RootLayout />,
-      errorElement: <PageNotFound />,
+      errorElement: <ErrorPage />,
       children: [
         {
           index: true,
