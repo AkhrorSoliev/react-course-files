@@ -1,0 +1,33 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap);
+
+body {
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "NotoColorEmoji",
+    "Segoe UI Symbol", "Android Emoji", "EmojiSymbols";
+}
+
+button {
+  font-family: inherit;
+}
+
+.images-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+
+  img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+}
+
+.buttons-container {
+  display: flex;
+  gap: 10px;
+
+  button {
+    width: 100%;
+    font-size: 30px;
+    cursor: pointer;
+  }
+}
