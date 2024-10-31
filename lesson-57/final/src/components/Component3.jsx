@@ -1,17 +1,9 @@
-import { useContext } from "react";
-import { GlobalContext } from "../context/GlobalContext";
-
-function Component3() {
-  const { counter, increment, decrement } = useContext(GlobalContext);
-
+function Component3({ counter, increment, decrement }) {
   return (
-    <div className="component-3">
-      <h3>Component3</h3>
-      <h3 className="counter">{counter}</h3>
-      <div>
-        <button onClick={() => increment(5)}>+</button>
-        <button onClick={() => decrement(2)}>-</button>
-      </div>
+    <div>
+      <h2>Component3 - {counter}</h2>
+      <button onClick={() => increment(5)}>+</button>
+      <button onClick={() => decrement(2)}>-</button>
     </div>
   );
 }

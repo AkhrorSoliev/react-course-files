@@ -1,21 +1,5 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-}
-
-.component-2 {
-  margin-left: 50px;
-}
-
-.component-3 {
-  margin-left: 50px;
-}
-
-.counter {
-  margin-left: 50px;
-}
-
-button {
-  cursor: pointer;
-  width: 80px;
-  height: 40px;
+  line-height: 1.5;
+  font-weight: 400;
 }

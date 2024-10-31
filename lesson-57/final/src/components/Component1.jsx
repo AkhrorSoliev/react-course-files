@@ -1,11 +1,14 @@
-import React from "react";
 import Component2 from "./Component2";
 
-function Component1() {
+function Component1({ counter, increment, decrement }) {
   return (
-    <div className="component-1">
-      <h3>Component1</h3>
-      <Component2 />
+    <div>
+      <h2>Component1 </h2>
+      <Component2
+        counter={counter}
+        increment={increment}
+        decrement={decrement}
+      />
     </div>
   );
 }
