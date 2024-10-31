@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div>
-      <h1>Component1</h1>
+      <h1>App</h1>
       <Component1
         counter={counter}
         increment={increment}

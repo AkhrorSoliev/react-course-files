@@ -2,7 +2,7 @@ import Component2 from "./Component2";
 
 function Component1({ counter, increment, decrement }) {
   return (
-    <div>
+    <div className="container">
       <h2>Component1 </h2>
       <Component2
         counter={counter}
