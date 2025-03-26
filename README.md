@@ -1,6 +1,6 @@
-📚 **React Darslari - O'zbek tilida**  
+ ## 📚 React Darslari - O'zbek tilida
 
-⚛️ React.js bo'yicha to'liq qo'llanma | 56+ video darsliklar  
+ ## ⚛️ React.js bo'yicha to'liq qo'llanma | 56+ video darsliklar  
 
 🔹 **Asosiy mavzular:**  
 - React asoslari & JSX  
