@@ -1,4 +1,22 @@
-# React Darslari - Tushuntirishlar va Linklar
+📚 **React Darslari - O'zbek tilida**  
+
+⚛️ React.js bo'yicha to'liq qo'llanma | 56+ video darsliklar  
+
+🔹 **Asosiy mavzular:**  
+- React asoslari & JSX  
+- Komponentlar & Props  
+- State & Hook'lar (useState, useEffect, useReducer)  
+- Formalar & Hodisalar  
+- React Router & Navigatsiya  
+- Style berish usullari  
+
+🔹 **Qo'shimcha:**  
+- Vite ⚡  
+- JSON Server 📡  
+- Axios & API ulash 🔗  
+- Amaliy loyihalar 🛠️  
+
+🎥 [Darsliklar Playlisti](https://www.youtube.com/playlist?list=PLNS3PujVHR-awWJYJ74hFbgt8cHeTCC_b)  
 
 ## Kirish qismi
 [01. React Kirish](https://www.youtube.com/watch?v=i24GQAhdvoE)  
